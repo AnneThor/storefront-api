@@ -1,8 +1,6 @@
 'use strict';
 
-// THIS IS THE STRETCH GOAL ...
-// It takes in a schema in the constructor and uses that instead of every collection
-// being the same and requiring their own schema. That's not very DRY!
+// Accepts a schema and provides methods to interact with the schema 
 
 class DataCollection {
 

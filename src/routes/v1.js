@@ -5,7 +5,6 @@ const express = require('express');
 const Collection = require('../models/data-collection.js');
 
 const router = express.Router();
-
 const models = new Map();
 
 router.param('model', (req, res, next) => {
@@ -66,6 +65,5 @@ async function handleDelete(req, res) {
   let deletedRecord = await req.model.delete(id);
   res.status(200).json(deletedRecord);
 }
-
 
 module.exports = router;
