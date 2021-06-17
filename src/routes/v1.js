@@ -13,7 +13,7 @@ router.param('model', (req, res, next) => {
     req.model = models.get(modelName);
     next();
   } else {
-    const fileName = `${__dirname}/../models/${modelName}/model.js`;
+    const fileName = `${__dirname}/../models/${modelName}/${modelName}.js`;
     if (fs.existsSync(fileName)) {
       const model = require(fileName);
       models.set(modelName, new Collection(model));
@@ -26,11 +26,11 @@ router.param('model', (req, res, next) => {
   }
 });
 
-router.get('/api/v1/:model', handleGetAll);
-router.get('/api/v1/:model/:id', handleGetOne);
-router.post('/api/v1/:model', handleCreate);
-router.put('/api/v1/:model/:id', handleUpdate);
-router.delete('/api/v1/:model/:id', handleDelete);
+router.get('/:model', handleGetAll);
+router.get('/:model/:id', handleGetOne);
+router.post('/:model', handleCreate);
+router.put('/:model/:id', handleUpdate);
+router.delete('/:model/:id', handleDelete);
 
 async function handleGetAll(req, res) {
   let allRecords = await req.model.get();
