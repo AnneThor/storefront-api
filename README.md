@@ -1,9 +1,9 @@
 # Storefront API
 AtlasDB with product and category records that are accessed in the virtual storefront front end.
 
-[Live Version of Virtual Storefront at Netlify]
+[Live Version of Virtual Storefront at Netlify](https://at-storefront.netlify.app/)
 
-[Deployed Version of API via Heroku]
+[Deployed Version of API via Heroku](https://at-storefront-server.herokuapp.com/)
 
 ## Author: Anne Thorsteinson
 
